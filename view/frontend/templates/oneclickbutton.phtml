@@ -48,6 +48,7 @@
     .qp8911_modal-body{
       height: 100%;
     }
+    .mage-error-qp{display: none;}
 </style>
 <style>
 
@@ -98,6 +99,7 @@
 }
 </style>
 <p class="oneclick-button" onclick="triggerIFrame()">QisstPay OneClick</p>
+<div class="mage-error-qp" style="color:red;">Select all required fields.</div>
 <?php
 $objectManager =  \Magento\Framework\App\ObjectManager::getInstance();
 $registry = $objectManager->get('\Magento\Framework\Registry');
@@ -200,6 +202,11 @@ function myFunction() {
 </script>
 <script type="text/javascript">
 function triggerIFrame() {
+      if (jQuery(".swatch-attribute-selected-option").is(':empty')) {
+        console.log('####################empty####################');
+        jQuery(".mage-error-qp").css("display", "block");
+        return;
+      }
       var productId = jQuery("#productId").text();
       var productImage = jQuery("#productImage").text();
       var productQuantity = jQuery(".qty #qty").val();
