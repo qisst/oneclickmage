@@ -137,14 +137,14 @@ $extstatus = $this->helper('Qisst\Oneclick\Helper\Data')->getConfig('qp/config/q
 $exstatus = $extstatus == 1? 'https://tezcheckout.qisstpay.com/':'https://sandbox.tezcheckout.qisstpay.com/';
 ?>
 
-<span type="hidden" id="productId" name="productId"><?php echo $proid ?></span>
-<span type="hidden" id="productImage" name="productImage"><?php echo $baseUrl.''.$proimage ?></span>
-<span type="hidden" id="baseurl" name="baseurl"><?php echo $baseUrl?></span>
-<span type="hidden" id="productTitle" name="productTitle"><?php echo $proname ?></span>
-<span type="hidden" id="productShipping" name="productShipping"></span>
-<span type="hidden" id="exstatus" name="exstatus"><?php echo $exstatus ?></span>
-<span type="hidden" id="token" name="token"></span>
-<span type="hidden" id="shippingmethodshtml" name="shippingmethodshtml"><?php echo $output ?></span>
+<span type="hidden" id="productId" name="productId" style="display:none"><?php echo $proid ?></span>
+<span type="hidden" id="productImage" name="productImage" style="display:none"><?php echo $baseUrl.''.$proimage ?></span>
+<span type="hidden" id="baseurl" name="baseurl" style="display:none"><?php echo $baseUrl?></span>
+<span type="hidden" id="productTitle" name="productTitle" style="display:none"><?php echo $proname ?></span>
+<span type="hidden" id="productShipping" name="productShipping" style="display:none"></span>
+<span type="hidden" id="exstatus" name="exstatus" style="display:none"><?php echo $exstatus ?></span>
+<span type="hidden" id="token" name="token" style="display:none"></span>
+<span type="hidden" id="shippingmethodshtml" name="shippingmethodshtml" style="display:none"><?php echo $output ?></span>
 <?php
 $colors = array();
 $colorsval = array();
