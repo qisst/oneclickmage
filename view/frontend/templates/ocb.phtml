@@ -148,7 +148,7 @@ foreach($items as $item) {
 <span type="hidden" id="baseurl" name="baseurl" style="display:none"><?php echo $baseUrl ?></span>
 <span type="hidden" id="exstatus" name="exstatus" style="display:none"><?php echo $exstatus ?></span>
 <span type="hidden" id="shippingmethodshtml" name="shippingmethodshtml" style="display:none"><?php echo $output ?></span>
-<p class="oneclick-button" onclick="triggerIFrame()">QisstPay OneClick</p>
+<p class="oneclick-button" onclick="triggerIFrame()"><img src="<?php echo $block->getViewFileUrl('Qisst_Magento24::images/oneclick.png'); ?>" style="width: 60% !important;"/></p>
 <script type="text/javascript">
 function triggerIFrame() {
       var productId = jQuery("#itfresinfo").text();
